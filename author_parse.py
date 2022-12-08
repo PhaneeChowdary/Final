@@ -3,6 +3,11 @@ import pandas as pd
 import re
 
 def txtTocsv(fileName):
+    """
+    This function takes command line argument as paramter and built to read every line and strip unnecessary characters such as (*+-=:;"',./|\!@#$%^&)  
+    and store every word into a dictionary(in `Word:Count` format) and
+    construct a dataframe from using that dictionary the prints the data to the console.
+    """
     print(fileName)
     path = 'authors/' + fileName + '.txt'
     words = dict()
